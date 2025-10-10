@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { Home } from "@/pages/Home/Home";
 import "./App.css";
-import app_logo from "./assets/themes/watching-a-movie.png";
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  BrowserRouter,
+} from "react-router-dom";
+import { NotFound } from "./pages/notfound/NotFound";
 function App() {
   return (
     <>
-      <div className="flex justify-center items-center h-screen">
-        <img src={app_logo} alt="Centered" className="max-w-full max-h-full" />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
