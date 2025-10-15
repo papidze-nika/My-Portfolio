@@ -1,0 +1,21 @@
+commands:
+  - command: echo "# react-app" >> README.md
+    description: "Creates a README.md file and writes the project title inside."
+
+  - command: git init
+    description: "Initializes a new Git repository in the current directory."
+
+  - command: git add README.md
+    description: "Stages the README.md file for commit."
+
+  - command: git commit -m "first commit"
+    description: "Commits the staged file with a message 'first commit'."
+
+  - command: git branch -M main
+    description: "Renames the current branch to 'main'."
+
+  - command: git remote add origin https://github.com/papidze-nika/react-app.git
+    description: "Adds a remote repository named 'origin' with the given GitHub URL."
+
+  - command: git push -u origin main
+    description: "Pushes the local 'main' branch to the remote repository and sets it as upstream."
