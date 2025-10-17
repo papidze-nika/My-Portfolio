@@ -5,6 +5,9 @@ import { Navbar } from "@/layout/Navbar/Navbar";
 import { HeroSection } from "@/layout/HeroSection/HeroSection";
 import { AboutSection } from "@/layout/AboutSection/AboutSection";
 import { SkillsSection } from "@/layout/SkillsSection/SkillsSection";
+import { ProjectsSection } from "@/layout/ProjectsSection/ProjectsSection";
+import { ContactSection } from "@/layout/ContactSection/ContactSection";
+import { Footer } from "@/layout/Footer/Footer";
 
 export const Home = () => {
   return (
@@ -21,9 +24,12 @@ export const Home = () => {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
+        <ProjectsSection />
+        <ContactSection />
       </main>
 
       {/* Footer*/}
+      <Footer />
     </div>
   );
 };

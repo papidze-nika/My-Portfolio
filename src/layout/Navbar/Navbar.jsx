@@ -2,13 +2,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { Storage } from "../../Storage/Storage";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +36,7 @@ export const Navbar = () => {
 
         {/* desktop nav */}
         <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
+          {Storage.navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
@@ -73,7 +67,7 @@ export const Navbar = () => {
           )}
         >
           <div className="flex flex-col space-y-8 text-xl">
-            {navItems.map((item, key) => (
+            {Storage.navItems.map((item, key) => (
               <a
                 key={key}
                 href={item.href}
