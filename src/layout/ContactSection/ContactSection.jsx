@@ -82,8 +82,13 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <h4 className="font-medium"> Location </h4>
+                  <a 
+                      href="https://www.google.com/maps/place/Tbilisi,+Georgia"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      >
                     Tbilisi, Georgia
                   </a>
                 </div>
