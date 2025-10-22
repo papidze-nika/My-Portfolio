@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Storage } from "@/Storage/Storage";
 import { ThemeToggle } from "@/components/ThemeToggle/ThemeToggle";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,23 +26,23 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         {/* Logo */}
-        <a
+        <Link
           className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
+          to="/"
         >
           <span className="text-glow text-foreground">NikaCore</span> Portfolio
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           {Storage.navItems.map((item, key) => (
-            <a
+            <Link
               key={key}
-              href={item.href}
+              to={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
 
           {/* Desktop Theme Toggle */}
@@ -73,14 +74,14 @@ export const Navbar = () => {
           {/* Mobile nav links */}
           <div className="flex flex-col items-center space-y-8 text-xl">
             {Storage.navItems.map((item, key) => (
-              <a
+              <Link
                 key={key}
-                href={item.href}
+                to={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

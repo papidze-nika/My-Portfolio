@@ -1,10 +1,11 @@
 export const Storage = {
   navItems: [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Skills", href: "/skills" },
+    { name: "Projects", href: "/projects" },
+    { name: "Application", href: "/application" },
+    { name: "Contact", href: "/contact" },
   ],
   projects: [
     {
